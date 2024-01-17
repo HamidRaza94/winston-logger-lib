@@ -10,7 +10,7 @@
     "declaration": true,
     "isolatedModules": true,
     "noEmit": true,
-    "lib": ["es6", "dom", "es2023"],
+    "lib": ["es6", "dom", "es2017"],
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "allowJs": true,

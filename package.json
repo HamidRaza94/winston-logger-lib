@@ -2,7 +2,7 @@
   "name": "winston-logger-lib",
   "version": "1.0.0",
   "description": "Logger library",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "tsup"
   },
