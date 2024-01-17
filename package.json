@@ -1,0 +1,20 @@
+{
+  "name": "winston-logger-lib",
+  "version": "1.0.0",
+  "description": "Logger library",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "Mohammad Hamid Raza",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.11.4",
+    "tsup": "8.0.1",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "winston": "3.11.0"
+  }
+}
