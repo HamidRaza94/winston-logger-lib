@@ -3,4 +3,14 @@ enum APP_ENVIRONMENTS {
 	production = 'production',
 }
 
-export { APP_ENVIRONMENTS };
+enum LOG_LEVELS {
+	error = 'error',
+	warn = 'warn',
+	info = 'info',
+	http = 'http',
+	verbose = 'verbose',
+	debug = 'debug',
+	silly = 'silly',
+}
+
+export { APP_ENVIRONMENTS, LOG_LEVELS };
