@@ -1,5 +1,8 @@
 import { TransformableInfo } from 'logform';
 
+import config from './config';
+import { APP_ENVIRONMENTS } from './constants';
+
 export const isObject = (variable: any): boolean =>
 	typeof variable === 'object' && !Array.isArray(variable) && variable !== null;
 
@@ -33,7 +36,7 @@ export const stringify = (obj: any): string => {
 	return obj;
 };
 
-export const printFormatter = (info: TransformableInfo) => {
+export const printFormatter = (info: TransformableInfo): string => {
 	let printMessage = `${info.timestamp} ${info.level}: ${stringify(info.message)}`;
 	const metadata = stringify(info.metadata);
 
@@ -43,3 +46,5 @@ export const printFormatter = (info: TransformableInfo) => {
 
 	return printMessage;
 };
+
+export const isNonProd = (): boolean => config.NODE_ENV !== APP_ENVIRONMENTS.production;
