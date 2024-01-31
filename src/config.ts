@@ -1,10 +1,11 @@
-import { Config } from './types';
+import { APP_ENVIRONMENTS } from './constants';
 
-let config: Config = {};
+const config = Object.freeze({
+	NODE_ENV: process.env.NODE_ENV || APP_ENVIRONMENTS.development,
 
-const assignConfig = (c: Config) => {
-	config = c;
-};
+	LOGGER_HOST: process.env.LOGGER_HOST || 'localhost',
+	LOGGER_PORT: Number(process.env.LOGGER_PORT || 8000),
+	LOGGER_PATH: process.env.LOGGER_PATH || '/api/logs',
+});
 
 export default config;
-export { assignConfig };

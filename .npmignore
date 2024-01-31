@@ -1,10 +1,24 @@
-/src
-/node_modules
-/.vscode
+# Github
+/.github
+.gitignore
 
-tsconfig.json
-tsup.config.ts
+# Code Formatter
 .editorconfig
 .eslintrc.json
-.gitignore
 .prettierrc.json
+
+# Node Modules
+/node_modules
+
+# Source Code
+/src
+
+# TypeScript Config
+tsconfig.json
+
+# Build Config
+tsup.config.ts
+release.config.js
+
+# Husky
+/.husky

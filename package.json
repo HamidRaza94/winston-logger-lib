@@ -4,17 +4,32 @@
   "description": "Logger library",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsup"
+    "clean:build": "rimraf ./build",
+    "build": "npm run clean:build && tsup",
+    "start": "tsc-watch --project . --onSuccess tsup"
   },
   "keywords": [],
   "author": "Mohammad Hamid Raza",
   "license": "MIT",
   "devDependencies": {
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "9.2.6",
+    "@semantic-release/npm": "11.0.2",
     "@types/node": "20.11.4",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "9.0.7",
+    "rimraf": "5.0.5",
+    "semantic-release": "23.0.0",
+    "tsc-watch": "6.0.4",
     "tsup": "8.0.1",
     "typescript": "5.3.3"
   },
   "dependencies": {
     "winston": "3.11.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
