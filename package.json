@@ -2,7 +2,13 @@
   "name": "winston-logger-lib",
   "version": "1.0.1",
   "description": "Logger library",
-  "main": "build/index.js",
+  "main": "./build/index.js",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HamidRaza94/winston-logger-lib.git"
+  },
   "scripts": {
     "clean:build": "rimraf ./build",
     "build": "npm run clean:build && tsup",
