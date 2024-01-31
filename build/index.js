@@ -101,7 +101,7 @@ var logger = (0, import_winston.createLogger)({
   format: import_winston.format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
   transports: [
     new import_winston.transports.Console({
-      level: config_default.NODE_ENV !== "production" /* production */ ? "debug" : "info",
+      level: config_default.NODE_ENV !== "production" /* production */ ? "debug" /* debug */ : "info" /* info */,
       handleExceptions: true,
       format: import_winston.format.combine(
         import_winston.format.metadata({ fillExcept: ["message", "level", "timestamp", "label"] }),
@@ -110,7 +110,7 @@ var logger = (0, import_winston.createLogger)({
       )
     }),
     new import_winston.transports.Http({
-      level: "error",
+      level: "error" /* error */,
       host: config_default.LOGGER_HOST,
       port: config_default.LOGGER_PORT,
       path: config_default.LOGGER_PATH,

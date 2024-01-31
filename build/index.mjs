@@ -78,7 +78,7 @@ var logger = createLogger({
   format: format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
   transports: [
     new transports.Console({
-      level: config_default.NODE_ENV !== "production" /* production */ ? "debug" : "info",
+      level: config_default.NODE_ENV !== "production" /* production */ ? "debug" /* debug */ : "info" /* info */,
       handleExceptions: true,
       format: format.combine(
         format.metadata({ fillExcept: ["message", "level", "timestamp", "label"] }),
@@ -87,7 +87,7 @@ var logger = createLogger({
       )
     }),
     new transports.Http({
-      level: "error",
+      level: "error" /* error */,
       host: config_default.LOGGER_HOST,
       port: config_default.LOGGER_PORT,
       path: config_default.LOGGER_PATH,
